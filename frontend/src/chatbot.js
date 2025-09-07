@@ -64,6 +64,7 @@ function Chatbot() {
           timeslot: input
         }).then(res => {
           setMessages(prev => [...prev, { text: res.data.message, sender: "bot" }]);
+<<<<<<< HEAD
           setSelectedJob(null); // ✅ Reset only when successful
         }).catch(err => {
           if (err.response && err.response.data && err.response.data.detail) {
@@ -72,6 +73,11 @@ function Chatbot() {
           } else {
             setMessages(prev => [...prev, { text: "Error scheduling interview.", sender: "bot" }]);
           }
+=======
+          setSelectedJob(null);
+        }).catch(err => {
+          setMessages(prev => [...prev, { text: "Error scheduling interview.", sender: "bot" }]);
+>>>>>>> ea46fc23ccbad6d64fff55771f15da52a696783b
         });
       } else {
         setMessages(prev => [...prev, { text: "Invalid timeslot. Please choose a valid timeslot.", sender: "bot" }]);
