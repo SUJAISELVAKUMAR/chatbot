@@ -1,0 +1,127 @@
+/* App.css */
+
+/* Background for entire page */
+body {
+  background-color: #f0f2f5;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background-color: #ffffff;
+}
+
+/* Header */
+.chat-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Messages area */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+}
+
+/* Message bubbles */
+.message {
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Bot messages */
+.message.bot {
+  background-color: #e0f7fa;
+  align-self: flex-start;
+}
+
+/* User messages */
+.message.user {
+  background-color: #c8e6c9;
+  align-self: flex-end;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Text input */
+.input-area input[type="text"] {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Send button */
+.input-area button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.input-area button:hover {
+  background-color: #45a049;
+}
+
+/* Candidate name input */
+.input-area input[name="name"] {
+  margin-top: 5px;
+}
+
+/* Job list */
+.job-list {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f4c3;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive for small devices */
+@media (max-width: 500px) {
+  .chat-container {
+    height: 80vh;
+    width: 95%;
+  }
+}
